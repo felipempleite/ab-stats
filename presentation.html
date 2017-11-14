@@ -42,17 +42,25 @@
           <span class="text-muted">Making good decisions requires</span>
           <h2>causal inference</h2>
           <p>
-            <span class="fragment">Umbrellas often appear just before it pours,</span>
-            <span class="fragment">but banning them will not stop the rain;</span>
-            <span class="fragment">it will just make everyone <mark>more wet</mark></span>
+            <span class="fragment">The faster windmills are observed to rotate, the more wind is observed to be.</span>
+            <span class="fragment">Therefore wind is <mark>caused by</mark> the rotation of windmills.</span>
           </p>
+        </section>
 
+        <section id="causal-inference-caution">
+          <span class="text-muted">Using causal inference requires</span>
+          <h2>caution</h2>
           <aside class="notes">
-            - We want gather evidence for a causal link between a change and behaviour
+            -
               - “By switching to B, we will cause more people to click ads!”
-            - Correlation is not sufficient for supporting decision making
-              - Direction of effect is as important as showing there is a relation at all
+            -
+              -
           </aside>
+          <ol>
+            <li class="fragment">We want to gather evidence for a causal link between a change and behaviour</li>
+            <li class="fragment">Correlation is not sufficient for supporting decision making</li>
+            <li class="fragment">Direction of effect is as important as showing there is a relation at all</li>
+          </ol>
         </section>
 
         <section id="app-rubin-full">
@@ -191,7 +199,7 @@
             <span class="fragment">The <mark>null hypothesis</mark> assumes no difference between treatment and control; any difference we observe is simply due to chance.</span>
           </p>
           <p>
-            <span class="fragment">If we could reasonably rule out chance, we might reject the null and consider this to be evidence for the <mark>alternative hypothesis</mark>.</span>
+            <span class="fragment">If we could reasonably rule out <mark>chance</mark> and <mark>measurement error</mark>, we might reject the null and consider this to be evidence for the <mark>alternative hypothesis</mark>.</span>
           </p>
 
           <aside class="notes">
@@ -217,6 +225,7 @@
         <section id="loaded-die">
           <span class="text-muted">Is this die</span>
           <h2>Fair?</h2>
+          </br>
           <p class="dice"><span class="fragment six">&#x2685</span><span class="fragment six">&#x2685</span><span class="fragment six">&#x2685</span></p>
           <p>
             <span class="fragment">p = 0.00462962</span>
@@ -234,8 +243,7 @@
           <span class="text-muted">We need to pick a</span>
           <h2>threshold</h2>
           <p>
-            <span class="fragment">One swallow does not a summer make, nor one fine day,</span>
-            <span class="fragment">but how many swallows do we count before we pack away our umbrellas?</span>
+            <span class="fragment">How many 6's are we willing to accept before questioning the die fairness?</span>
           </p>
           <p>
             <span class="fragment"><b>Scientific standard for significance:</b> <mark>p < 0.05</mark></span>
@@ -249,16 +257,29 @@
         </section>
 
         <section id="trick-question">
-          <span class="text-muted">p-values are often<small>[2]</small></span>
-          <h2>misinterpreted</h2>
-
+          <span class="text-muted">p-values are</span>
+          <h2>tricky</h2>
+          <p>
           <span class="fragment">Assuming there is no difference between two groups that you have tested, which p-value do you think is <mark>more likely</mark>:</span>
-          <span class="fragment"><mark>p=.009 or p=.9</mark>?</span>
-          <aside class="notes">
-            They are equally likely!
-          </aside>
+          <span class="fragment"><mark>p=.009 or p=.900</mark>?</span>
+          </br>
+          </br>
+          <span class="fragment"><mark>They are equally likely!</mark></span>
+        </p>
         </section>
-        
+
+        <section id="uniformly-distributed">
+          <span class="text-muted">under the null hypothesis, p-values are</span>
+          <h2>uniformly distributed</h2>
+          <p>
+          <span class="fragment">P-values indicates <mark>how likely</mark> that result should be observed <mark>assuming</mark> the null hypothesis</span>
+          </br>
+          <span class="fragment">Therefore 5% of the experiments should fall below p=.05</span>
+          </br>
+          <span class="fragment">And 0.1% will have p=.009 and p=.900</span>
+        </p>
+        </section>
+
         <section id="misinterpreted-p-value">
           <span class="text-muted">p-values are often<small>[2]</small></span>
           <h2>misinterpreted</h2>
@@ -285,7 +306,7 @@
           <h2>errors</h2>
 
           <ol>
-            <li class="fragment"><mark>Type-I</mark> is the incorrect rejection of a true null hypothesis; <span class="fragment">we cried wolf when there was none</span></li>
+            <li class="fragment"><mark>Type-I</mark> is the incorrect rejection of a true null hypothesis; <span class="fragment">we detected an effect when there was none</span></li>
             <li class="fragment"><mark>Type-II</mark> is the failure to reject a false null hypothesis; <span class="fragment">we failed to detect a real effect</span></li>
           </ol>
 
