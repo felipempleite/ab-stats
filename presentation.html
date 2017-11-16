@@ -223,7 +223,7 @@
         </section>
 
         <section id="loaded-die">
-          <span class="text-muted">Is this die</span>
+          <span class="text-muted">Are these dice</span>
           <h2>Fair?</h2>
           </br>
           <p class="dice"><span class="fragment six">&#x2685</span><span class="fragment six">&#x2685</span><span class="fragment six">&#x2685</span></p>
@@ -288,24 +288,17 @@
           </p>
         </section>
 
-        <section id="alternative-histogram">
-          <h2>Alternative hypothesis simulated</h2>
+        <section id="normal-histogram">
+          <h2>Normal scenario simulated</h2>
+          <span class="text-muted">some have an effect, others don't</span>
           <p>
           <span class="fragment"><img class="pvalue" src="images/pvalue_histograms/pvalue-A.png" height="500" width="500" style="border: 0; box-shadow: 0px 0px 0px rgba(0, 0, 0, .0);"></span>
-          </br>
-          </p>
-        </section>
-
-        <section id="alternative-histogram-explained">
-          <h2>Alternative hypothesis explained</h2>
-          <p>
           <span class="fragment"><img class="pvalue" src="images/pvalue_histograms/pvalue-A2.png" height="500" width="500" style="border: 0; box-shadow: 0px 0px 0px rgba(0, 0, 0, .0);"></span>
-          </br>
           </p>
         </section>
 
         <section id="multiple-alternative-histogram">
-          <h2>Weak to strong alternatives</h2>
+          <h2>Low to High % alternatives</h2>
           <p>
           <span class="fragment"><img class="pvalue" src="images/pvalue_histograms/pvalue-A3.png" height="500" width="500" style="border: 0; box-shadow: 0px 0px 0px rgba(0, 0, 0, .0);"></span>
           </br>
@@ -364,6 +357,13 @@
           <span class="fragment" data-method="toggle_repeat" trigger-hidden><small class="text-very-muted"><i class="glyphicon glyphicon-forward"></i></small></span>
         </section>
 
+        <section id="app-type-i2">
+          <h3>Repeating the same experiment <small>(No effect)</small></h3>
+          <simulation v-bind:effect="0.0" v-bind:n="4000" display_true_effect display_type_i reveal_enabled></simulation>
+          <span class="fragment" data-method="step"><small class="text-very-muted"><i class="glyphicon glyphicon-step-forward"></i></small></span>
+          <span class="fragment" data-method="toggle_repeat" trigger-hidden><small class="text-very-muted"><i class="glyphicon glyphicon-forward"></i></small></span>
+        </section>
+
         <section id="app-type-ii">
           <h3>Repeating the same experiment <small>(Small effect)</small></h3>
           <simulation v-bind:effect="0.05" display_true_effect display_type_ii reveal_enabled></simulation>
@@ -399,21 +399,27 @@
         </section>
 
         <section id="app-type-ii-3">
-          <h3>Repeating the same experiment <small>(MOAR POWER!!11)</small></h3>
+          <h3>Repeating the same experiment <small>(Even more power)</small></h3>
           <simulation v-bind:effect="0.05" v-bind:n="4000" display_type_ii display_power reveal_enabled></simulation>
           <span class="fragment" data-method="toggle_repeat" trigger-hidden><small class="text-very-muted"><i class="glyphicon glyphicon-forward"></i></small></span>
         </section>
 
+        <section id="app-type-ii-4">
+          <h3>Repeating the same experiment <small>(MOAR POWER!!11)</small></h3>
+          <simulation v-bind:effect="0.05" v-bind:n="8000" display_type_ii display_power reveal_enabled></simulation>
+          <span class="fragment" data-method="toggle_repeat" trigger-hidden><small class="text-very-muted"><i class="glyphicon glyphicon-forward"></i></small></span>
+        </section>
+
+<!--
         <section id="app-one-trial-2">
           <h3>Up, down or neither?<small>(I don't know either)</small></h3>
           <simulation v-bind:effect="Math.random() > 0.5 ? 0 : Math.random() > 0.5 ? 0.1 : -0.1" hide_guide display_observed_effect display_last_effect reveal_enabled></simulation>
           <span class="fragment" data-method="step"><small class="text-very-muted"><i class="glyphicon glyphicon-step-forward"></i></small></span>
           <span class="fragment" data-method="step"><small class="text-very-muted"><i class="glyphicon glyphicon-step-forward"></i></small></span>
           <span class="fragment" data-method="step"><small class="text-very-muted"><i class="glyphicon glyphicon-step-forward"></i></small></span>
-          <span class="fragment" data-method="step"><small class="text-very-muted"><i class="glyphicon glyphicon-step-forward"></i></small></span>
-          <span class="fragment" data-method="step"><small class="text-very-muted"><i class="glyphicon glyphicon-step-forward"></i></small></span>
           <span class="fragment" data-method="toggle_repeat" trigger-hidden><small class="text-very-muted"><i class="glyphicon glyphicon-forward"></i></small></span>
         </section>
+-->
 
         <section id="protocol">
           <span class="text-muted">The importance of sticking to</span>
@@ -426,15 +432,16 @@
         </section>
 
         <section id="app-dice">
-          <span class="text-muted">Can telekenisis influence</span>
-          <h2>Three dice?</h2>
+          <span class="text-muted">Can these dice be influenced by</span>
+          <h2>telekinesis?</h2>
+          </br>
           <span class="fragment"><dice reveal_enabled></dice></span>
           <span class="fragment" data-method="rerandomize"></span>
           <span class="fragment" data-method="toggle_repeat" trigger-hidden></span>
           <p>
             <span class="fragment">p = 1</span>
             </br>
-            <span class="fragment text-muted"><small>(Fair die; I still cheated)</small></span>
+            <span class="fragment text-muted"><small>(Fair dice; I still cheated)</small></span>
           </p>
         </section>
 
@@ -475,7 +482,7 @@
           <br />
           <p>
             <small>
-              <b>Lukas Vermeer</b> is <b>Senior Product Owner</b> for <b>Experimentation</b> at <b>Booking.com</b>
+              Credits to <b>Lukas Vermeer</b> is <b>Senior Product Owner</b> for <b>Experimentation</b> at <b>Booking.com</b>
             </small>
           </p>
           <p>
@@ -493,6 +500,7 @@
             <li><small>Goodman, Steve 2008. “A dirty dozen: twelve P-value misconceptions.” Seminars in Hematology, 45 (2008), pp. 135-140. (<a href="https://www.researchgate.net/publication/5272766_A_Dirty_Dozen_Twelve_P-Value_Misconceptions" target="_blank">link</a>)</small></li>
             <li><small>Kohavi, R., Longbotham, R., Sommerfield, D. et al. 2009 “Controlled experiments on the web: survey and practical guide” Data Min Knowl Disc (2009) 18: 140. (<a href="http://bit.ly/expSurvey" target="_blank">link</a>)</small></li>
             <li><small>Alex Deng, Tianxi Li, Yu Guo 2014 “Statistical Inference in Two-Stage Online Controlled Experiments with Treatment Selection and Validation” WWW '14. 609–618.(<a href="http://www.exp-platform.com/Documents/p609-deng.pdf" target="_blank">link</a>)</small></li>
+            <li><small>Robinson, Davis "Interpreting p-value Histograms"(<a href="http://varianceexplained.org/statistics/interpreting-pvalue-histogram/" target="_blank">link</a>)</small></li>
           </ol>
         </section>
       </div>
@@ -529,9 +537,11 @@
       new Vue({ el: '#app-one-trial' });
       new Vue({ el: '#app-one-trial-2' });
       new Vue({ el: '#app-type-i' });
+      new Vue({ el: '#app-type-i2' });
       new Vue({ el: '#app-type-ii' });
       new Vue({ el: '#app-type-ii-2' });
       new Vue({ el: '#app-type-ii-3' });
+      new Vue({ el: '#app-type-ii-4' });
       new Vue({ el: '#app-multiple-testing' });
       new Vue({ el: '#app-multiple-testing-2' });
 
