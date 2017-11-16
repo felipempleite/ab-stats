@@ -1,3 +1,13 @@
+/* CSS for Pvalue Histograms*/
+img .pvalue
+{
+  border: 0; !important
+  -moz-box-shadow: 0px 0px 0px rgba(0, 0, 0, .0); !important
+  -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, .0); !important
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, .0); !important
+  border-radius: 0px 0px 0px 0px; !important
+  background: none; !important
+}
 /* Overview page specific overrides. */
 .overview.vcenter {
   min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
